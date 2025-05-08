@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://cukipu5a7kbf8"]
+
+[ext_resource type="Script" uid="uid://dpbu0iig2u0jt" path="res://player/player.gd" id="1_ulp21"]
+[ext_resource type="PackedScene" uid="uid://c5u8f4ohtmhp1" path="res://entity/entity_components/MovementComponent.tscn" id="2_3c3w1"]
+
+[sub_resource type="Gradient" id="Gradient_wnvi2"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_83hs8"]
+gradient = SubResource("Gradient_wnvi2")
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_ulp21")
+
+[node name="MovementComponent" parent="." instance=ExtResource("2_3c3w1")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 2)
+texture = SubResource("GradientTexture2D_83hs8")

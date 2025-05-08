@@ -11,5 +11,11 @@ config_version=5
 [application]
 
 config/name="Desidia v2"
+run/main_scene="uid://c4kijeyxb4v22"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[debug]
+
+gdscript/warnings/untyped_declaration=2
+gdscript/warnings/inferred_declaration=2
