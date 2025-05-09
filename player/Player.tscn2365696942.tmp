@@ -1,10 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://cukipu5a7kbf8"]
+[gd_scene load_steps=8 format=3 uid="uid://cukipu5a7kbf8"]
 
 [ext_resource type="Script" uid="uid://dpbu0iig2u0jt" path="res://player/player.gd" id="1_ulp21"]
 [ext_resource type="PackedScene" uid="uid://c5u8f4ohtmhp1" path="res://entity/entity_components/MovementComponent.tscn" id="2_3c3w1"]
 [ext_resource type="Resource" uid="uid://cun2a64xlkxjo" path="res://entity/player_stats.tres" id="2_wnvi2"]
 [ext_resource type="PackedScene" uid="uid://djvj0jtpu5mgs" path="res://entity/entity_components/HealthComponent.tscn" id="3_83hs8"]
-[ext_resource type="PackedScene" uid="uid://cf5awuy7httg3" path="res://entity/entity_components/AttackComponent.tscn" id="3_x8kxw"]
 
 [sub_resource type="Gradient" id="Gradient_wnvi2"]
 
@@ -17,14 +16,13 @@ gradient = SubResource("Gradient_wnvi2")
 script = ExtResource("1_ulp21")
 stats = ExtResource("2_wnvi2")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = SubResource("GradientTexture2D_83hs8")
-
 [node name="HealthComponent" parent="." instance=ExtResource("3_83hs8")]
 
-[node name="AttackComponent" parent="." instance=ExtResource("3_x8kxw")]
-
 [node name="MovementComponent" parent="." instance=ExtResource("2_3c3w1")]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 2)
+texture = SubResource("GradientTexture2D_83hs8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_3c3w1")

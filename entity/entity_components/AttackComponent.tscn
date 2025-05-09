@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cf5awuy7httg3"]
+
+[ext_resource type="Script" uid="uid://bqhwrh6v55nd6" path="res://entity/entity_components/attack_component.gd" id="1_p6h0n"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_smpe0"]
+
+[node name="AttackComponent" type="Area2D"]
+script = ExtResource("1_p6h0n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_smpe0")
+disabled = true
+debug_color = Color(1, 0, 0, 0.419608)
